@@ -1,4 +1,4 @@
-const array = [6, -9, -9, -1, 1, 2, 4, 4, 6, 7, 8, 4, 9, 15, 25, 2];
+const array = [6, -3, -3, -1, 1, 2, 4, 4, 6, 7, 8, 4, 9, 15, 19, 2];
 // 1.  How do you find the missing numbers in a given integer array?
 const findMissingNumbers = (array) => {
   array.sort((a, b) => a - b);
@@ -6,7 +6,7 @@ const findMissingNumbers = (array) => {
   for (let index = 0; index < array.length; index++) {
     const currentNumber = array[index];
     const previousNumber = array[index - 1];
-    let sum = currentNumber - previousNumber;
+    const sum = currentNumber - previousNumber;
     if (sum != 1) {
       for (let index = sum - 1; index > 0; index--) {
         const element = currentNumber - index;
